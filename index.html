@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS綜合練習-地球與月球軌道11-01'11-02'11-03'11-04</title>
+    <style>
+        html,body {
+            height: 100%;
+            overflow: hidden; 
+
+        }
+        #universe{
+            background: radial-gradient(#555,#000);
+        }
+
+        @keyframes starFlash {
+            from {opacity:1;}
+            to {opacity:0.3;}
+        }
+
+
+        #stars{
+            height: 100%;
+            background-image: url("images/stars.png");
+            background-size: cover;
+            animation: starFlash 4s infinite alternate;
+        }
+        @keyframes sunLight{
+            from {box-shadow: 0 0 45px #f5c91a;}
+            to {box-shadow: 0 0 90px #f5c91a;}
+        }
+
+        #sun{
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(#f5c313,#ec7e08);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+            border-radius: 100px;
+            box-shadow: 0 0 45px #f5c91a;
+            animation: sunLight 1s infinite alternate;
+        }
+        
+        @keyframes spin{
+            from{transform:rotate(0)}
+            to{transform: rotate(360deg);}
+        }
+
+        #earthOrbit{
+            height: 600px;
+            width: 600px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -300px;
+            margin-left: -300px;
+            /* border: 1px solid red; */
+            border-radius: 100%; 
+            animation: spin 30s linear infinite;
+
+        }
+
+        #earth {
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            margin-left: -40px;
+            animation: spin 10s linear infinite;
+        }
+        
+        #moonOrbit{
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: 50%;
+            margin-top: -60px;
+            margin-left: -60px;
+            /* border: 1px solid red; */
+            border-radius: 100%;
+            animation: spin 5s linear infinite;
+        }
+
+        #moon {
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(#ddd,#888);
+            border-radius: 100%;
+        }
+        
+        #mercury {
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            margin-left: -40px;
+            animation: spin 10s linear infinite;
+        }
+        
+        /* 水星 */
+        #mercuryOrbit{
+            height: 250px;
+            width:250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -125px;
+            margin-left: -125px;
+            /* border: 1px solid red; */
+            border-radius: 100%; 
+            animation: spin 10s linear infinite;
+
+        }
+
+        #mercury {
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            margin-left: -10px;
+            animation: spin 10s linear infinite;
+        }
+
+        /* 金星 */
+        #venusOrbit{
+            height: 400px;
+            width:400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -200px;
+            margin-left: -200px;
+            /* border: 1px solid red; */
+            border-radius: 100%; 
+            animation: spin 20s linear infinite;
+
+        }
+
+        #venus {
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            margin-left: -20px;
+            animation: spin 10s linear infinite;
+        } 
+
+        /* 火星 */
+        #marsOrbit{
+            height: 800px;
+            width:800px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -400px;
+            margin-left: -400px;
+            /* border: 1px solid red; */
+            border-radius: 100%; 
+            animation: spin 40s linear infinite;
+
+        }
+
+        #mars {
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            margin-left: -20px;
+            animation: spin 10s linear infinite;
+        } 
+        
+        /* 土星 */
+        #jupiterOrbit{
+            height: 900px;
+            width:900px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -450px;
+            margin-left: -450px;
+            /* border: 1px solid red; */
+            border-radius: 100%; 
+            animation: spin 50s linear infinite;
+
+        }
+
+        #jupiter {
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            margin-left: -40px;
+            animation: spin 10s linear infinite;
+        }
+
+        /* 木星 */
+        
+        #saturnOrbit{
+            height: 1000px;
+            width:1000px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -500px;
+            margin-left: -500px;
+            /* border: 1px solid red; */
+            border-radius: 100%; 
+            animation: spin 60s linear infinite;
+
+        }
+
+        #saturn {
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            margin-left: -40px;
+            animation: spin 10s linear infinite;
+        }
+
+
+        /* 天王星 */
+        #uranusOrbit{
+            height: 1100px;
+            width:1100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -550px;
+            margin-left: -550px;
+            /* border: 1px solid red; */
+            border-radius: 100%; 
+            animation: spin 80s linear infinite;
+
+        }
+
+        #uranus {
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            margin-left: -40px;
+            animation: spin 10s linear infinite;
+        }
+
+        /* 海王星 */
+        #neptuneOrbit{
+            height: 1200px;
+            width: 1200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -600px;
+            margin-left: -600px;
+            /* border: 1px solid red; */
+            border-radius: 100%; 
+            animation: spin 100s linear infinite;
+
+        }
+
+        #neptune {
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            margin-left: -40px;
+            animation: spin 10s linear infinite;
+        }
+    
+
+    </style>
+</head>
+<body id="universe">
+    <div id="stars"></div>
+    <div id="sun"></div>
+    <div id="earthOrbit">
+        <img id="earth" src="images/earth.png" alt="earth" width="80px" height="80px">
+        <div id="moonOrbit">
+            <div id="moon"></div>
+        </div>
+
+    </div>    
+    <!-- 水星 -->
+    <div id="mercuryOrbit">
+        <img id="mercury" src="Planet/01水星.png"alt="mercury" width="20px" height="20px" ></img> 
+    </div>
+    
+    <!-- 金星 -->
+    <div id="venusOrbit">
+        <img id="venus" src="Planet/02金星.png" alt="venus" width="40px" height="40px"></img>
+    </div>
+
+    <!-- 火星 -->
+    <div id="marsOrbit">
+        <img id="mars" src="Planet/4火星.png" alt="mars" width="40px" height="40px"></img>
+    </div>
+
+    <!-- 土星     -->
+    <div id="jupiterOrbit">
+        <img id="jupiter" src="Planet/05土星.png" alt="jupiter" width="80px" height="80px"></img>
+    </div>
+
+    <!-- 木星     -->
+    <div id="saturnOrbit">
+        <img id="saturn" src="Planet/06木星.png" alt="saturn" width="80px" height="80px"></img>
+    </div>
+
+    <!-- 天王星 -->
+    <div id="uranusOrbit">
+        <img id="uranus" src="Planet/07天王星.png" alt="uranus" width="80px" height="80px"></img>
+    </div>
+
+    <!-- 海王星 -->
+    <div id="neptuneOrbit">
+        <img id="neptune" src="Planet/08海王星.png" alt="neptune" width="80px" height="80px"></img>
+    </div>
+    
+
+
+
+
+    
+    
+
+    
+</body>
+</html>
